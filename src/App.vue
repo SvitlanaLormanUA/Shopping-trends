@@ -4,6 +4,12 @@ import HelloWorld from './components/HelloWorld.vue'
 import ChristmasTree from './components/ChristmasTree.vue'
 import Pivot from './components/Pivot.vue'
 import '@webdatarocks/webdatarocks/theme/teal/webdatarocks.css'
+
+const reportCsv = {
+  dataSource: {
+    filename: 'src/assets/shopping_trends.csv',
+  },
+}
 </script>
 
 <template>
@@ -13,7 +19,7 @@ import '@webdatarocks/webdatarocks/theme/teal/webdatarocks.css'
     <div class="wrapper">
       <div class="pivot-container">
         <div class="logo">📊 Vue 3 + WebDataRocks</div>
-        <Pivot toolbar />
+        <Pivot v-bind:report="reportCsv" toolbar />
       </div>
       <ChristmasTree />
     </div>

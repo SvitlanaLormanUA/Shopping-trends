@@ -4,9 +4,11 @@
 
 <script>
 import WebDataRocks from '@webdatarocks/webdatarocks'
+
 export default {
   name: 'Pivot',
   props: {
+    dataSource: Object, // Add the dataSource prop
     afterchartdraw: Function,
     aftergriddraw: Function,
     beforegriddraw: Function,
@@ -54,6 +56,7 @@ export default {
     this.webdatarocks = new WebDataRocks({
       ...this.$props,
       container: this.$el,
+      dataSource: this.dataSource, // Pass the dataSource here
     })
   },
   beforeUpdate() {
