@@ -46,19 +46,27 @@ const reportCsv = {
   <header>
     <link rel="stylesheet" type="text/css" href="theme/teal/webdatarocks.min.css" />
 
-    <div class="wrapper">
-      <div class="pivot-container">
-        <div class="logo">📊 Vue 3 + WebDataRocks</div>
-        <Pivot v-bind:report="reportCsv" toolbar />
+    <div class="main">
+      <div class="wrapper">
+        <div class="pivot-container">
+          <div class="logo">📊 Vue 3 + WebDataRocks</div>
+          <Pivot v-bind:report="reportCsv" toolbar />
+        </div>
+        <ChristmasTree id="ch-tree" />
       </div>
-      <ChristmasTree />
     </div>
   </header>
 </template>
 
 <style scoped>
+#ch-tree {
+  margin-top: 13.5rem;
+}
 .pivot-container {
-  width: 105%;
+  width: 110%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 :root {
   --color-primary: #00796b;
@@ -104,6 +112,7 @@ nav a.router-link-exact-active {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: fit-content;
   gap: 10rem;
 }
 @media (min-width: 1024px) {
