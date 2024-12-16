@@ -9,6 +9,36 @@ const reportCsv = {
   dataSource: {
     filename: 'src/assets/shopping_trends.csv',
   },
+  slice: {
+    rows: [
+      {
+        uniqueName: 'Category',
+      },
+      {
+        uniqueName: 'Item Purchased',
+      },
+      {
+        uniqueName: 'Gender',
+      },
+    ],
+    columns: [
+      {
+        uniqueName: 'Season',
+      },
+    ],
+    measures: [
+      {
+        uniqueName: 'Purchase Amount (USD)',
+        aggregation: 'sum',
+      },
+    ],
+  },
+  options: {
+    grid: {
+      showTotals: 'off',
+      layout: 'classic',
+    },
+  },
 }
 </script>
 
@@ -28,7 +58,7 @@ const reportCsv = {
 
 <style scoped>
 .pivot-container {
-  width: 100%;
+  width: 105%;
 }
 :root {
   --color-primary: #00796b;
