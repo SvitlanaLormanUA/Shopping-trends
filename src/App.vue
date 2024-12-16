@@ -2,21 +2,17 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import ChristmasTree from './components/ChristmasTree.vue'
-import Pivot from 'vue-flexmonster/vue3'
-import 'flexmonster/flexmonster.css'
+import Pivot from './components/Pivot.vue'
+import '@webdatarocks/webdatarocks/theme/teal/webdatarocks.css'
 </script>
 
 <template>
   <header>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.flexmonster.com/theme/teal/flexmonster.min.css"
-    />
+    <link rel="stylesheet" type="text/css" href="theme/teal/webdatarocks.min.css" />
 
     <div class="wrapper">
       <div class="pivot-container">
-        <div class="logo">📊 Vue 3 + Flexmonster</div>
+        <div class="logo">📊 Vue 3 + WebDataRocks</div>
         <Pivot toolbar />
       </div>
       <ChristmasTree />
@@ -25,6 +21,9 @@ import 'flexmonster/flexmonster.css'
 </template>
 
 <style scoped>
+.pivot-container {
+  width: 100%;
+}
 :root {
   --color-primary: #00796b;
   --color-secondary: #004d40;
