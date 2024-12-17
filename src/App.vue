@@ -63,10 +63,9 @@ const reportCsv = {
   margin-top: 13.5rem;
 }
 .pivot-container {
-  width: 110%;
+  min-width: 1000px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
 :root {
   --color-primary: #00796b;
@@ -132,9 +131,5 @@ nav a.router-link-exact-active {
   nav {
     margin-top: 0;
   }
-}
-.pivot-container {
-  display: flex;
-  flex-direction: column;
 }
 </style>

@@ -2,14 +2,26 @@
 import $ from 'jquery'
 
 export default {
+  data() {
+    return {
+      isClicked: false, // Define isClicked here
+    }
+  },
+  methods: {
+    toggleTreeState() {
+      this.isClicked = !this.isClicked
+    },
+    resetTreeState() {
+      this.isClicked = false
+    },
+  },
   mounted() {
-    // Example: Add jQuery functionality on mount
     $('#christmas-tree')
-      .mouseleave(function () {
-        $(this).removeClass('clicked')
+      .mouseleave(() => {
+        this.isClicked = false
       })
-      .click(function () {
-        $(this).addClass('clicked').html($(this).html())
+      .click(() => {
+        this.isClicked = true
       })
   },
 }
