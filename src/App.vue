@@ -36,7 +36,6 @@ const reportCsv = {
   options: {
     grid: {
       showTotals: 'off',
-      layout: 'classic',
     },
   },
 }

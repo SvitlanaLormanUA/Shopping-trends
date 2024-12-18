@@ -1,10 +1,8 @@
 <script>
-import $ from 'jquery'
-
 export default {
   data() {
     return {
-      isClicked: false, // Define isClicked here
+      isClicked: false,
     }
   },
   methods: {
@@ -16,13 +14,17 @@ export default {
     },
   },
   mounted() {
-    $('#christmas-tree')
-      .mouseleave(() => {
+    const treeElement = document.getElementById('christmas-tree')
+
+    if (treeElement) {
+      treeElement.addEventListener('mouseleave', () => {
         this.isClicked = false
       })
-      .click(() => {
+
+      treeElement.addEventListener('click', () => {
         this.isClicked = true
       })
+    }
   },
 }
 </script>
