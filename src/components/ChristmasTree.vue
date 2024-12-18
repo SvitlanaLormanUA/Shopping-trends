@@ -71,7 +71,7 @@ body {
   border-left: 5px solid transparent;
   border-bottom: 55px solid #823723;
   height: 0;
-  animation: drop 1s linear;
+  animation: drop 1s linear; /** makes the tree appear with a dropping effect when the page loads. */
 }
 
 .tree:before {

@@ -1,0 +1,6 @@
+body {
+  border: 3em solid seashell;
+  border-top: 5em solid seashell;
+  border-bottom: 5em solid seashell;
+  height: fit-content;
+}
